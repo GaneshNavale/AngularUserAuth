@@ -2,6 +2,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import {AuthDialogComponent} from "../auth-dialog/auth-dialog.component";
 import {AuthService} from "../services/auth.service";
 import {Router} from "@angular/router";
+import 'jquery';
+import { MaterializeModule } from 'angular2-materialize';
 
 @Component({
   selector: 'app-toolbar',
@@ -22,4 +24,8 @@ export class ToolbarComponent implements OnInit {
   presentAuthDialog(mode?: 'login'| 'register'){
     this.authDialog.openDialog(mode);
   }
+
+  ngAfterContentInit() {
+    (<any>$(".button-collapse")).sideNav();
+  }        
 }
