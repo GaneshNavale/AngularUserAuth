@@ -15,8 +15,10 @@ import { AuthDialogComponent } from './auth-dialog/auth-dialog.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { RegisterFormComponent } from './register-form/register-form.component';
 import {AuthService} from "./services/auth.service";
+import {ApiService} from './api.service';
 import { ProfileComponent } from './profile/profile.component';
 import {AuthGuard} from "./guards/auth.guard";
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import {AuthGuard} from "./guards/auth.guard";
     AuthDialogComponent,
     LoginFormComponent,
     RegisterFormComponent,
-    ProfileComponent
+    ProfileComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,7 @@ import {AuthGuard} from "./guards/auth.guard";
     AppRoutingModule,
     MaterializeModule
   ],
-  providers: [ Angular2TokenService, AuthService, AuthGuard ],	
+  providers: [ Angular2TokenService, AuthService, AuthGuard, ApiService ],	
   bootstrap: [AppComponent]
 })
 export class AppModule { }
