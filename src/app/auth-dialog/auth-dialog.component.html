@@ -3,16 +3,17 @@
   <div class="modal-content">
 
     <div class="row">
-
-      <span class="modal-close right">
-        <i class="fa fa-times" aria-hidden="true"></i>
-      </span>
+        <span class="modal-close right">
+          <i class="fa fa-times" aria-hidden="true"></i>
+        </span>
     </div>
 
     <div class="row container">
 
       <div class="row center">
-        <h3 class="grey-text text-darken-2">{{authMode | uppercase}}</h3>
+        
+        <h3 class='title grey-text text-darken-2 center'>{{authMode | uppercase}}
+        </h3>
 
         <app-login-form (onFormResult)="onLoginFormResult($event)"
                         *ngIf="isLoginMode()">
